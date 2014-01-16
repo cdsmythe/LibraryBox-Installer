@@ -14,10 +14,10 @@ mainmenu() {
 	do
 		echo "-------------------------------------"
 		echo " " 
-		echo "   1 - Setting password and enable SSH"
-		echo "   2 - Set date & time (enable timesave)"
+		echo "   1 - Set password and enable SSH"
+		echo "   2 - Set date & time"
 		echo " "
-		echo " Everything else causes an exit"
+		echo " Any other key = exit"
 		echo " "
 		read -p " Choose an option: " option
 
@@ -32,7 +32,7 @@ mainmenu() {
 
 _set_password_() {
 
-	echo "Please enter your password. The following command won't show you the entered letters."
+	echo "Please enter a password. (Password will not be displayed while typing)"
 	local cmd=passwd
 	if  ! $DEBUG  ; then
 		$cmd  && echo "$? ....OK" 
